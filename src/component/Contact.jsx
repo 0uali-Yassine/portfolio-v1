@@ -1,19 +1,25 @@
-import { useState } from "react";
 import Navbar from "../pages/Navbar";
+import { useGlobalContext } from "../Context";
 
 const Contact = () => {
+  const { language } = useGlobalContext();
+
   return (
     <>
       <Navbar />
       <div className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg mt-10">
-        <h2 className="text-2xl font-bold text-center mb-4">Contact Me</h2>
+        <h2 className="text-2xl font-bold text-center mb-4">
+          {language === 'en' ? 'Contact Me' : 'Contactez-moi'}
+        </h2>
         <form
           action="https://formcarry.com/s/oGqIkTy58O_"
           method="POST"
           className="space-y-4"
         >
           <div>
-            <label className="block text-sm font-semibold mb-1">Name</label>
+            <label className="block text-sm font-semibold mb-1">
+              {language === 'en' ? 'Name' : 'Nom'}
+            </label>
             <input
               type="text"
               name="name"
@@ -31,7 +37,9 @@ const Contact = () => {
             />
           </div>
           <div>
-            <label className="block text-sm font-semibold mb-1">Message</label>
+            <label className="block text-sm font-semibold mb-1">
+              {language === 'en' ? 'Message' : 'Message'}
+            </label>
             <textarea
               name="message"
               required
@@ -43,7 +51,7 @@ const Contact = () => {
             type="submit"
             className="w-full bg-[#ECD06F] border border-2 text-black py-2 rounded-lg hover:bg-white hover:drop-shadow-md transition duration-300"
           >
-            Send Message
+            {language === 'en' ? 'Send Message' : 'Envoyer le message'}
           </button>
         </form>
       </div>
