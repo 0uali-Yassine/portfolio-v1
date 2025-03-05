@@ -5,8 +5,6 @@ import { MdOpenInBrowser } from "react-icons/md";
 
 
 function Work() {
-  console.log(data);
-
   const [newData, setNewData] = useState(data);
 
 
