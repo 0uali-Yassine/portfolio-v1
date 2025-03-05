@@ -11,14 +11,22 @@ function App() {
   const [showLoaderThree, setShowLoaderThree] = useState(true);
 
   useEffect(() => {
-    const timerOne = setTimeout(() => setShowLoaderOne(false), 2000);
-    const timerTwo = setTimeout(() => setShowLoaderTwo(false), 3000);
-    const timerThree = setTimeout(() => setShowLoaderThree(false), 4000);
+    document.body.style.overflow = "hidden";
+    
+    const timerOne = setTimeout(() => setShowLoaderOne(false), 1500);
+    const timerTwo = setTimeout(() => setShowLoaderTwo(false), 2000);
+    const timerThree = setTimeout(() => setShowLoaderThree(false), 2500);
+
+    const scrollTimer = setTimeout(() => {
+      document.body.style.overflow = "auto"; // Enable scrolling after 2500ms
+    }, 2500);
   
     return () => {
       clearTimeout(timerOne);
       clearTimeout(timerTwo);
       clearTimeout(timerThree);
+      clearTimeout(scrollTimer);
+      document.body.style.overflow = "auto"; // Ensure scrolling is re-enabled
     };
   }, []);
 
@@ -29,19 +37,19 @@ function App() {
       <div className={`absolute bg-black w-[100vw] z-11 h-[100vh] flex justify-center items-center transition-transform duration-1000 ${
             !showLoaderOne ? '-translate-y-[100%]' : 'translate-y-0'
           }`}>
-        <h3 className='text-white text-5xl text-center mt-[10%]'>YZ</h3>
+        <h3 className='text-white text-5xl text-center mt-[10%]'>YZ <br/> 2 </h3>
       </div>
 
       <div className={`absolute bg-[#ECD06F] w-[100vw] z-10 h-[100vh] flex justify-center items-center transition-transform duration-1000 ${
             !showLoaderTwo ? '-translate-y-[100%]' : 'translate-y-0'
           }`}>
-        <h3 className='text-white text-5xl text-center mt-[10%]'>YZ</h3>
+        <h3 className='text-white text-5xl text-center mt-[10%]'>YZ <br/> 1</h3>
       </div>
 
       <div className={`absolute bg-white w-[100vw] z-9 h-[100vh] flex justify-center items-center transition-transform duration-1000 ${
             !showLoaderThree ? '-translate-y-[100%]' : 'translate-y-0'
           }`}>
-        <h3 className='text-black text-5xl text-center mt-[10%]'>YZ</h3>
+        <h3 className='text-black text-5xl text-center mt-[10%]'>YZ <br/> 0</h3>
       </div>
 
       <BrowserRouter>
