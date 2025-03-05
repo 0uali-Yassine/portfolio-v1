@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/portfolio-v1/static/css/main.67e8bb6c.css",
+    "main.js": "/portfolio-v1/static/js/main.0bf75648.js",
+    "static/js/453.20419cad.chunk.js": "/portfolio-v1/static/js/453.20419cad.chunk.js",
+    "static/media/chat-app-2.png": "/portfolio-v1/static/media/chat-app-2.f4514f926eb6e0f4082d.png",
+    "static/media/space-tourisme.png": "/portfolio-v1/static/media/space-tourisme.2820ed891ab6ce7576d8.png",
+    "static/media/e-commerce-2.png": "/portfolio-v1/static/media/e-commerce-2.91f1377f1d63021b48dd.png",
+    "static/media/chat-app-1.png": "/portfolio-v1/static/media/chat-app-1.f58b84baf4426fcf59ae.png",
+    "static/media/e-commerce-3.png": "/portfolio-v1/static/media/e-commerce-3.31e6d08ae7857204e03e.png",
+    "static/media/kanban-task-managment.png": "/portfolio-v1/static/media/kanban-task-managment.855d3351c9239a760913.png",
+    "static/media/ecommerce-1.png": "/portfolio-v1/static/media/ecommerce-1.dd812f2050a5d6adc2dc.png",
+    "static/media/easy-bank.png": "/portfolio-v1/static/media/easy-bank.db2feca6a974004946c4.png",
+    "static/media/Ego-removebg-preview.png": "/portfolio-v1/static/media/Ego-removebg-preview.855fc6a02b7a724961af.png",
+    "static/media/472786624_584256024223856__n.png": "/portfolio-v1/static/media/472786624_584256024223856_2890606436802401464_n.992edd9047dff3d399aa.png",
+    "static/media/dashboard-2.png": "/portfolio-v1/static/media/dashboard-2.192b280909867f1fa9d5.png",
+    "static/media/e-learning.png": "/portfolio-v1/static/media/e-learning.fe3f14dfd86e1bd026b9.png",
+    "static/media/blogr-landing-page.jpg": "/portfolio-v1/static/media/blogr-landing-page.deeed775f084f4658b57.jpg",
+    "static/media/sunnyside-agency.jpg": "/portfolio-v1/static/media/sunnyside-agency.f676005a14ca4aec61a0.jpg",
+    "static/media/dashboard-1.png": "/portfolio-v1/static/media/dashboard-1.5d1d0e595979bd4c2aa3.png",
+    "static/media/bookmark.png": "/portfolio-v1/static/media/bookmark.b690a24f9e5b446c5ed1.png",
+    "static/media/manage-landing-page.png": "/portfolio-v1/static/media/manage-landing-page.01fd1dc5e9e074ed07c2.png",
+    "static/media/ecommerce-product-page.jpg": "/portfolio-v1/static/media/ecommerce-product-page.49b6db0eef813bb44d61.jpg",
+    "static/media/Oakside.ttf": "/portfolio-v1/static/media/Oakside.b932f25e623d097b42e7.ttf",
+    "index.html": "/portfolio-v1/index.html",
+    "main.67e8bb6c.css.map": "/portfolio-v1/static/css/main.67e8bb6c.css.map",
+    "main.0bf75648.js.map": "/portfolio-v1/static/js/main.0bf75648.js.map",
+    "453.20419cad.chunk.js.map": "/portfolio-v1/static/js/453.20419cad.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.67e8bb6c.css",
+    "static/js/main.0bf75648.js"
+  ]
+}
