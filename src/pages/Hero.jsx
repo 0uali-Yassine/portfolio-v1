@@ -4,7 +4,7 @@ import { useGlobalContext } from '../Context';
 
 function Hero() {
   const [newPosition, setNewPosition] = useState({ x: 0, y: 0 });
-  const { language } = useGlobalContext();
+  const { language,theme } = useGlobalContext();
 
   const onMousePostion = (e) => {
     setNewPosition({ x: e.clientX, y: e.clientY });
@@ -15,7 +15,7 @@ function Hero() {
   };
 
   return (
-    <div className='p-5 flex flex-col items-center justify-center min-h-screen'>
+    <div className={`p-5 flex flex-col items-center justify-center min-h-screen ${theme ? 'bg-white text-black' : 'bg-black text-white'}`}>
       <p className='w-full md:w-[80%] p-5 text-lg md:text-xl text-left'>
         {language === 'en' ? (
           <>👋, Is <span className='underline underline-offset-[3px] decoration-[#ECD06F]'>Yassine</span> and I'm</>
@@ -24,7 +24,8 @@ function Hero() {
         )}
       </p>
       <div className='relative text-4xl md:text-6xl lg:text-8xl w-full md:w-[80%] text-center'>
-        <h1 className='font-[Oakside] absolute left-[10%] text-center text-border drop-shadow-lg'>
+        {/*text-border-Dark*/}
+        <h1 className={`font-[Oakside] absolute left-[10%] text-center  text-border drop-shadow-lg ${theme ? 'text-border' : 'text-border-Dark'}`}>
           {language === 'en' ? 'Front-end' : 'Développeur'}
         </h1>
         <div

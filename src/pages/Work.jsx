@@ -6,7 +6,7 @@ import { useGlobalContext } from '../Context';
 
 function Work() {
   const [newData, setNewData] = useState(data);
-  const { language } = useGlobalContext();
+  const { language,theme } = useGlobalContext();
 
   const filterData = (category) => {
     if (category === 'all') return setNewData(data); // just return all  data ;)
@@ -15,7 +15,7 @@ function Work() {
   };
 
   return (
-    <div className='p-6'>
+    <div className={`p-6 ${theme ? 'bg-white text-black' : 'bg-black text-white'}a`}>
       <h3 id='work' className='text-2xl font-bold'>
         {language === 'en' ? '/ Work' : '/ Projets'}
       </h3>

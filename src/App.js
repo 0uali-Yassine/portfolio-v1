@@ -3,8 +3,10 @@ import './App.css';
 import Home from './component/Home';
 import Contact from './component/Contact';
 import { useEffect, useState } from 'react';
+import { useGlobalContext } from './Context';
 
 function App() {
+  const {theme} = useGlobalContext();
 
   const [showLoaderOne, setShowLoaderOne] = useState(true);
   const [showLoaderTwo, setShowLoaderTwo] = useState(true);
@@ -33,7 +35,7 @@ function App() {
  
 
   return (
-    <div className="relative overflow-hidden">
+    <div className={`relative overflow-hidden ${theme ? 'bg-white' : 'bg-black'}`}>
       <div className={`absolute bg-black w-[100vw] z-11 h-[100vh] flex justify-center items-center transition-transform duration-1000 ${
             !showLoaderOne ? '-translate-y-[100%]' : 'translate-y-0'
           }`}>

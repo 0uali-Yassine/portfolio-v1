@@ -28,6 +28,12 @@ code {
   -webkit-text-stroke: 2px black; /* Border color and width */
   color: transparent; /* Text fill transparent */
 }
+.text-border-Dark {
+  -webkit-text-stroke: 2px white; /* Border color and width */
+  color: transparent; /* Text fill transparent */
+}
+
+
 
 .roboto{
   font-family: "Roboto", sans-serif;

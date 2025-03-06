@@ -8,9 +8,9 @@ import { HiCommandLine } from 'react-icons/hi2';
 import { useGlobalContext } from '../Context';
 
 function About() {
-  const { language } = useGlobalContext();
+  const { language, theme } = useGlobalContext();
   return (
-    <div className='p-5'>
+    <div className={`${theme ? 'bg-white text-black' : 'bg-black text-white'} p-5`}>
       <h3 id="about" className='text-2xl font-bold'>
         {language === 'en' ? '/ About' : '/ À propos'}
       </h3>

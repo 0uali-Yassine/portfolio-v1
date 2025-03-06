@@ -2,13 +2,13 @@ import Navbar from "../pages/Navbar";
 import { useGlobalContext } from "../Context";
 
 const Contact = () => {
-  const { language } = useGlobalContext();
+  const { language,theme } = useGlobalContext();
 
   return (
     <>
       <Navbar />
-      <div className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg mt-10">
-        <h2 className="text-2xl font-bold text-center mb-4">
+      <div className={`max-w-lg mx-auto mb-[5px]  p-6 rounded-lg shadow-lg mt-10 ${theme ? 'bg-white text-black shadow-lg' : 'bg-black text-white drop-shadow-[0_4px_10px_rgba(236,208,111,0.7)]'}`}>
+        <h2 className={`text-2xl font-bold text-center mb-4`}>
           {language === 'en' ? 'Contact Me' : 'Contactez-moi'}
         </h2>
         <form
@@ -49,7 +49,7 @@ const Contact = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-[#ECD06F] border border-2 text-black py-2 rounded-lg hover:bg-white hover:drop-shadow-md transition duration-300"
+            className="w-full hover:cursor-pointer bg-[#ECD06F] border border-2 text-black py-2 rounded-lg hover:bg-white hover:drop-shadow-md transition duration-300"
           >
             {language === 'en' ? 'Send Message' : 'Envoyer le message'}
           </button>

@@ -4,9 +4,10 @@ const myContext = createContext();
 
 function Context({children}) {
     const [language, setLanguage] = useState('en');
+    const [theme, setTheme] = useState(true);
 
   return (
-    <myContext.Provider value={{setLanguage, language}}>
+    <myContext.Provider value={{setLanguage, language,setTheme, theme}}>
         {children}
     </myContext.Provider>
   )

@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { MdOutlineCloudDownload } from "react-icons/md";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { MdOutlineLightMode,MdNightlightRound } from "react-icons/md";
 import { useGlobalContext } from '../Context';
 
+
 function Navbar() {
-    const { language, setLanguage } = useGlobalContext();
+    const { language, setLanguage,setTheme, theme} = useGlobalContext();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -14,11 +16,11 @@ function Navbar() {
 
     const handleLanguageChange = (lang) => {
         setLanguage(lang); 
-        setIsMenuOpen(false); 
+        setIsMenuOpen(false); //bgTheme
     };
 
     return (
-        <div className='p-5 text-xl big-shoulders'>
+        <div className={`p-5 text-xl big-shoulders' ${theme ? 'bg-white text-black' : 'bg-black text-white'}`}>
             <nav className="flex justify-between items-center">
                 <a className="text-3xl" href="#">YZ<span className='text-[#ECD06F]'>ERO</span></a>
 
@@ -43,7 +45,14 @@ function Navbar() {
                     </li>
                 </ul>
 
+
                 <div className="hidden lg:flex items-center gap-5">
+                    <div className=' p-2 rounded hover:drop-shadow-md drop-shadow-lg hover:cursor-pointer' onClick={() => setTheme(prev =>!prev)} >
+                        {
+                            theme ? <MdOutlineLightMode/> : <MdNightlightRound/>
+                        }
+                    </div>
+
                     <div className='flex gap-3'>
                         <button
                             onClick={() => handleLanguageChange('en')}
@@ -66,7 +75,7 @@ function Navbar() {
             </nav>
 
             {isMenuOpen && (
-                <div className="fixed z-20 inset-0 bg-black bg-opacity-75 flex flex-col items-center justify-center space-y-6 text-white text-2xl">
+                <div className={`fixed z-20 inset-0 bg-black bg-opacity-75 flex flex-col items-center justify-center space-y-6 text-white text-2xl`}>
                     <button onClick={toggleMenu} className="absolute hover:cursor-pointer top-5 right-5 text-3xl">
                         <AiOutlineClose />
                     </button>
@@ -74,6 +83,11 @@ function Navbar() {
                     <a onClick={toggleMenu} className="hover:text-[#ECD06F]" href="#about">{language === 'en' ? 'About' : 'À propos'}</a>
                     <a onClick={toggleMenu} className="hover:text-[#ECD06F]" href="#work">{language === 'en' ? 'Work' : 'Projets'}</a>
                     <NavLink onClick={toggleMenu} className="hover:text-[#ECD06F]" to="/contact">{language === 'en' ? 'Contact' : 'Contactez-moi'}</NavLink>
+                    <div className=' p-2 rounded hover:drop-shadow-md drop-shadow-lg hover:cursor-pointer' onClick={() => setTheme(prev =>!prev)} >
+                        {
+                            theme ? <MdOutlineLightMode/> : <MdNightlightRound/>
+                        }
+                    </div>
                     <div className='flex gap-3'>
                         <button
                             onClick={() => handleLanguageChange('en')}
