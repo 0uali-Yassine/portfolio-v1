@@ -56,13 +56,13 @@ function Navbar() {
                     <div className='flex gap-3'>
                         <button
                             onClick={() => handleLanguageChange('en')}
-                            className={`hover:text-[#ECD06F] hover:cursor-pointer ${language === 'en' ? 'underline' : ''}`}
+                            className={`hover:text-[#ECD06F] hover:cursor-pointer ${language === 'en' ? 'underline text-[#ECD06F]' : ''}`}
                         >
                             EN
                         </button>
                         <button
                             onClick={() => handleLanguageChange('fr')}
-                            className={`hover:text-[#ECD06F] hover:cursor-pointer ${language === 'fr' ? 'underline' : ''}`}
+                            className={`hover:text-[#ECD06F] hover:cursor-pointer ${language === 'fr' ? 'underline text-[#ECD06F]' : ''}`}
                         >
                             FR
                         </button>
